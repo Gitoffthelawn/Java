@@ -1,21 +1,22 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 20",
     "homepage": "https://jdk.java.net/20",
-    "version": "20-23-ea",
+    "version": "20.0.2-9",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/early_access/jdk20/23/GPL/openjdk-20-ea+23_windows-x64_bin.zip",
-            "hash": "ccb9c93fb62e650814b144e6097463b00e166366469ddcd2e87f3a2ae5d05771"
+            "url": "https://download.java.net/java/GA/jdk20.0.2/6e380f22cbe7469fa75fb448bd903d8e/9/GPL/openjdk-20.0.2_windows-x64_bin.zip",
+            "hash": "7e5870fd2e19b87cbd1981c4ff7203897384c2eb104977f40ce4951b40ab433e"
         }
     },
-    "extract_dir": "jdk-20",
+    "extract_dir": "jdk-20.0.2",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "re": "/(?<type>early_access|GA)/(?<path>jdk(?<major>[\\d.]+)(?:.*)?/(?<build>[\\d]+)(?:/GPL|/binaries)?)/(?<file>openjdk-(?<version>[\\d.]+)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin.(zip|tar.gz))",
+        "url": "https://jdk.java.net/archive/",
+        "re": "https://download\\.java\\.net/java/(?<type>GA)/(?<path>jdk(?<major>20(?:\\.[\\d]+)*)/[^/]+/(?<build>[\\d]+)(?:/GPL|/binaries)?)/(?<file>openjdk-(?<version>20(?:\\.[\\d]+)*)(?<ea>-ea)?(?:\\+[\\d]+)?_windows-x64_bin\\.(zip|tar.gz))",
         "replace": "${version}-${build}${ea}"
     },
     "autoupdate": {

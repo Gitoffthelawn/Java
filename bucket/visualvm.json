@@ -1,10 +1,10 @@
 {
     "homepage": "https://visualvm.github.io/",
     "license": "https://visualvm.github.io/gplv2+ce.html",
-    "version": "2.1.5",
-    "url": "https://github.com/oracle/visualvm/releases/download/2.1.5/visualvm_215.zip",
-    "hash": "1f9cbdcb3485637ea35034ad1fccae2fb5f2bccb0e653435255c95570c6b5d90",
-    "extract_dir": "visualvm_215",
+    "version": "2.2.1",
+    "url": "https://github.com/oracle/visualvm/releases/download/2.2.1/visualvm_221.zip",
+    "hash": "6884c908c9e10a959dea8e7b168b496515c0310d6b86a35ce96b8197231f4ef3",
+    "extract_dir": "visualvm_221",
     "bin": [
         [
             "bin\\visualvm.exe",
